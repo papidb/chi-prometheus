@@ -6,7 +6,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/v5"
 
 	chiprometheus "github.com/papidb/chi-prometheus"
 	"github.com/prometheus/client_golang/prometheus/promhttp"
