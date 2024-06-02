@@ -8,8 +8,8 @@ import (
 
 	"github.com/go-chi/chi"
 
-	"github.com/766b/chi-prometheus"
-	"github.com/prometheus/client_golang/prometheus"
+	chiprometheus "github.com/papidb/chi-prometheus"
+	"github.com/prometheus/client_golang/prometheus/promhttp"
 )
 
 func main() {
@@ -20,7 +20,7 @@ func main() {
 
 	n.Use(m)
 
-	n.Handle("/metrics", prometheus.Handler())
+	n.Handle("/metrics", promhttp.Handler())
 	n.Get("/ok", func(w http.ResponseWriter, r *http.Request) {
 		sleep := rand.Intn(4999) + 1
 		time.Sleep(time.Duration(sleep) * time.Millisecond)
@@ -32,5 +32,5 @@ func main() {
 		fmt.Fprintln(w, "not found")
 	})
 
-	http.ListenAndServe(":3000", n)
+	http.ListenAndServe(":7444", n)
 }

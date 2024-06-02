@@ -12,7 +12,7 @@ Instead of logging request times, it is considered best practice to provide an e
 
 ## Installation
 
-    go get github.com/766b/chi-prometheus
+    go get github.com/papidb/chi-prometheus
 
 ## Usage
 
