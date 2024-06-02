@@ -4,9 +4,10 @@ go 1.22.3
 
 require (
 	github.com/edjumacator/chi-prometheus v0.0.0-20181210190628-e076595e3e86
-	github.com/go-chi/chi v1.5.5
 	github.com/prometheus/client_golang v1.19.1
 )
+
+require github.com/go-chi/chi v1.5.5 // indirect
 
 require (
 	github.com/beorn7/perks v1.0.1 // indirect
